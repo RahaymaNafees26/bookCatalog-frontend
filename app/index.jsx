@@ -211,7 +211,7 @@ const App = () => {
     }
 
     try {
-      const url = "http://192.168.1.149:5000/auth/signup";
+      const url = "https://book-catalog-backend-wine.vercel.app/auth/signup";
 
       const response = await axios.post(url, signupInfo, {
         headers: {

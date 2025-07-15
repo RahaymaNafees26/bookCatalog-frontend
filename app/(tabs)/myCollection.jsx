@@ -21,7 +21,7 @@ export default function MyCollection() {
     const token = await AsyncStorage.getItem("token");
     const userId = await AsyncStorage.getItem("userId");
     console.log("MyCollection userId:", userId);
-    const url = "http://192.168.1.149:5000/books";
+    const url = "https://book-catalog-backend-wine.vercel.app/books";
     try {
       const response = await axios.get(url, {
         headers: { Authorization: `Bearer ${token}` },

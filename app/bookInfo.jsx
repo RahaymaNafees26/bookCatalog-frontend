@@ -25,7 +25,7 @@ export default function BookDetails() {
   const getBookData = async () => {
     const token = await AsyncStorage.getItem("token");
     const loggedInUserId = await AsyncStorage.getItem("userId");
-    const url = "http://192.168.1.149:5000/books";
+    const url = "https://book-catalog-backend-wine.vercel.app/books";
     try {
       const response = await axios.get(`${url}/${id}`, {
         headers: {
@@ -63,7 +63,7 @@ export default function BookDetails() {
           onPress: async () => {
             try {
               const token = await AsyncStorage.getItem("token");
-              const url = "http://192.168.1.149:5000/books";
+              const url = "https://book-catalog-backend-wine.vercel.app/books";
               await axios.delete(`${url}/${book._id}`, {
                 headers: {
                   Authorization: `Bearer ${token}`,
